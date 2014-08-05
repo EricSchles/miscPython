@@ -1,0 +1,17 @@
+import os
+import tarfile
+
+if os.path.exists("filez"):
+  os.mkdir("filez")
+os.chdir("filez")
+
+for i in xrange(100):
+    thing = open("test"+str(i)+".txt","w")
+    thing.write("hello"+str(i))
+    thing.close()
+
+os.chdir("../")
+
+tar = tarfile.open("helloK.tar.gz","w:gz")
+tar.add("filez/",arcname="hellok")
+tar.close()
