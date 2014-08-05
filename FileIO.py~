@@ -1,0 +1,10 @@
+
+#basic file IO
+test = open("test.txt","w")
+test.write("testing...")
+test.close()
+
+test = open("test.txt","r")
+print test.read()
+test.close()
+
