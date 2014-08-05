@@ -3,7 +3,7 @@ import os #used later in the program..
 #basic file IO
 #writing to a file
 test = open("test.txt","w")
-test.write("testing...")
+test.write("testing...\n")
 test.close()
 
 #reading from a file
@@ -14,7 +14,7 @@ test.close()
 #Note - if you open file with "w" for write it will create the file if it does not already exist.  However, it will delete the contents of the file.
 
 test = open("test.txt","a")
-test.write("even more testing...")
+test.write("even more testing...\n")
 test.close()
 
 test = open("test.txt","r")
@@ -24,7 +24,7 @@ test.close()
 #finally, reading and writing to a file object at once.
 
 test = open("test.txt", "r+")
-test.write("well there")
+test.write("well there\n")
 test.seek(0)
 print test.read()
 test.close()
